@@ -1,0 +1,22 @@
+<h2>Put the question and options here:</h2>
+<a href="#/dashboard" style = "float: right;">Cancel</a>
+<div>
+	<form novalidate name='addPoll'>
+		<label>Question: </label>
+		<textarea ng-model="newPoll.question" name="question" ng-minlength="8" required></textarea><br />
+		<label>option 1: </label>
+		<input ng-model="newPoll.options.option1" name="option1" ng-minlength="3" required/><br /><br />
+		<label>option 2: </label>
+		<input ng-model="newPoll.options.option2" name='option2' ng-minlength='3' required/><br /><br />
+		<label>option 3: </label>
+		<input ng-model="newPoll.options.option3" name='option3' ng-minlength='3' required/><br /><br />
+		<label>option 4: </label>
+		<input ng-model="newPoll.options.option4" name='option4' ng-minlength='3' required/><br /><br />
+		<button ng-disabled='addPoll.$invalid' ng-click="createPoll(newPoll)">Create Poll</button>
+	</form>
+	<p><span ng-show="addPoll.question.$error.minlength">Should be at least 8 characters long!</span></p>
+	<p><span ng-show="addPoll.option1.$error.minlength">Should be at least 3 characters long!</span></p>
+	<p><span ng-show="addPoll.option2.$error.minlength">Should be at least 3 characters long!</span></p>
+	<p><span ng-show="addPoll.option3.$error.minlength">Should be at least 3 characters long!</span></p>
+	<p><span ng-show="addPoll.option4.$error.minlength">Should be at least 3 characters long!</span></p>
+</div>

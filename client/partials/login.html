@@ -1,0 +1,4 @@
+Your Name: <form ng-submit='loginUser(newUser)' novalidate name='login'>
+	<input type='text' ng-trim='false' ng-model='newUser.name' ng-pattern='/^[a-zA-Z0-9_]*$/' name='username' required />
+	<button ng-disabled='login.$invalid'>Login</button>
+</form>
